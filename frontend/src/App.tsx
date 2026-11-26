@@ -1,22 +1,22 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
-import Pocetna from './pages/Pocetna'
-import Katalog from './pages/Katalog'
-import Proizvod from './pages/Proizvod'
-import Korpa from './pages/Korpa'
-import Prijava from './pages/Prijava'
-import NijePronadjeno from './pages/NijePronadjeno'
+import HomePage from './pages/HomePage'
+import CatalogPage from './pages/CatalogPage'
+import ProductPage from './pages/ProductPage'
+import CartPage from './pages/CartPage'
+import LoginPage from './pages/LoginPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<Pocetna />} />
-        <Route path="/katalog" element={<Katalog />} />
-        <Route path="/proizvod/:id" element={<Proizvod />} />
-        <Route path="/korpa" element={<Korpa />} />
-        <Route path="/prijava" element={<Prijava />} />
-        <Route path="*" element={<NijePronadjeno />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/katalog" element={<CatalogPage />} />
+        <Route path="/proizvod/:id" element={<ProductPage />} />
+        <Route path="/korpa" element={<CartPage />} />
+        <Route path="/prijava" element={<LoginPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   )

@@ -1,4 +1,4 @@
-function Katalog() {
+function CatalogPage() {
   return (
     <div>
       <h1 className="text-2xl font-bold">Katalog</h1>
@@ -7,4 +7,4 @@ function Katalog() {
   )
 }
 
-export default Katalog
+export default CatalogPage

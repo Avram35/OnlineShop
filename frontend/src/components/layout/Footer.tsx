@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 function Footer() {
-  const godina = new Date().getFullYear()
+  const year = new Date().getFullYear()
 
   return (
     <footer className="border-t border-line bg-surface">
@@ -24,7 +24,7 @@ function Footer() {
         </div>
       </div>
 
-      <p className="text-center text-xs text-muted pb-6">© {godina} OnlineShop</p>
+      <p className="text-center text-xs text-muted pb-6">© {year} OnlineShop</p>
     </footer>
   )
 }

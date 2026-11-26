@@ -2,7 +2,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 function Header() {
   // aktivan link je tamniji i podvucen
-  const klasaLinka = ({ isActive }: { isActive: boolean }) =>
+  const linkClass = ({ isActive }: { isActive: boolean }) =>
     isActive ? 'text-ink underline underline-offset-4' : 'text-muted hover:text-ink'
 
   return (
@@ -13,10 +13,10 @@ function Header() {
         </Link>
 
         <nav className="flex items-center gap-5 text-sm">
-          <NavLink to="/katalog" className={klasaLinka}>
+          <NavLink to="/katalog" className={linkClass}>
             Katalog
           </NavLink>
-          <NavLink to="/prijava" className={klasaLinka}>
+          <NavLink to="/prijava" className={linkClass}>
             Prijava
           </NavLink>
           <NavLink

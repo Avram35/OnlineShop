@@ -1,4 +1,4 @@
-function Korpa() {
+function CartPage() {
   return (
     <div>
       <h1 className="text-2xl font-bold">Korpa</h1>
@@ -7,4 +7,4 @@ function Korpa() {
   )
 }
 
-export default Korpa
+export default CartPage

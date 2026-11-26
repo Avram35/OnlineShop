@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 
-function Proizvod() {
+function ProductPage() {
   const { id } = useParams()
 
   return (
@@ -11,4 +11,4 @@ function Proizvod() {
   )
 }
 
-export default Proizvod
+export default ProductPage

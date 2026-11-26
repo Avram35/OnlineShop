@@ -1,4 +1,4 @@
-function Pocetna() {
+function HomePage() {
   return (
     <div>
       <h1 className="text-2xl font-bold">Početna</h1>
@@ -7,4 +7,4 @@ function Pocetna() {
   )
 }
 
-export default Pocetna
+export default HomePage

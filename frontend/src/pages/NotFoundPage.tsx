@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-function NijePronadjeno() {
+function NotFoundPage() {
   return (
     <div className="text-center py-16">
       <h1 className="text-2xl font-bold">Stranica ne postoji</h1>
@@ -12,4 +12,4 @@ function NijePronadjeno() {
   )
 }
 
-export default NijePronadjeno
+export default NotFoundPage

@@ -1,6 +1,9 @@
 import { Link, NavLink } from 'react-router-dom'
+import { useAuth } from '../../hooks/useAuth'
 
 function Header() {
+  const { user, loading, logout } = useAuth()
+
   // aktivan link je tamniji i podvucen
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     isActive ? 'text-ink underline underline-offset-4' : 'text-muted hover:text-ink'
@@ -16,9 +19,20 @@ function Header() {
           <NavLink to="/katalog" className={linkClass}>
             Katalog
           </NavLink>
-          <NavLink to="/prijava" className={linkClass}>
-            Prijava
-          </NavLink>
+          {/* dok ne znamo da li je neko prijavljen, ne prikazujemo nista */}
+          {!loading && user && (
+            <>
+              <span className="text-muted">{user.ime}</span>
+              <button onClick={logout} className="text-muted hover:text-ink">
+                Odjava
+              </button>
+            </>
+          )}
+          {!loading && !user && (
+            <NavLink to="/prijava" className={linkClass}>
+              Prijava
+            </NavLink>
+          )}
           <NavLink
             to="/korpa"
             className="bg-ink text-white px-3 py-1.5 rounded hover:bg-black"

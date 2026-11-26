@@ -5,6 +5,7 @@ import CatalogPage from './pages/CatalogPage'
 import ProductPage from './pages/ProductPage'
 import CartPage from './pages/CartPage'
 import LoginPage from './pages/LoginPage'
+import RegisterPage from './pages/RegisterPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/proizvod/:id" element={<ProductPage />} />
         <Route path="/korpa" element={<CartPage />} />
         <Route path="/prijava" element={<LoginPage />} />
+        <Route path="/registracija" element={<RegisterPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
